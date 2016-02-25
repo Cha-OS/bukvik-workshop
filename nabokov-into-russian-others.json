@@ -1,0 +1,449 @@
+{
+	"name": "Nabokov into Russian by Others",
+	"authors": "Eugenia Kelbert & Sasha Mile Rudan",
+	"version": "0.1",
+	"description": "Close analysis of Nabokov's English novels translated into Russian by various translators (not the author)",
+	
+	"data": [
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "knight-ru-bar",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "knight-ru-bar",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['words.separators.toKeep']": ["-", "—", "(", ")", "[", "]", ",", ":", ";", "'", "`", "\"", "«", "»", "<", ">"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_RUSSIAN>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "russian",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.russian.national",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "knight-ru-bar",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "knight-ru-bar"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "knight-ru-ilyin-sm",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "knight-ru-ilyin-sm",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['words.separators.toKeep']": ["-", "—", "(", ")", "[", "]", ",", ":", ";", "'", "`", "\"", "\"", "”", "–"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_RUSSIAN>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "russian",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.russian.national",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "knight-ru-ilyin-sm",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "knight-ru-ilyin-sm"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "knight-ru-meilah",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "knight-ru-meilah",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['words.separators.toKeep']": ["-", "—", "(", ")", "[", "]", ",", ":", ";", "'", "`", "\"", "«", "»", "<", ">", "\"", "”"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_RUSSIAN>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "russian",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.russian.national",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "knight-ru-meilah",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "knight-ru-meilah"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "harlequins-ru-ilyin",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "harlequins-ru-ilyin",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['words.separators.toKeep']": ["-", "—", "–", "(", ")", "[", "]", "{", "}", ",", ":", ";", "'", "`", "“", "\"", "«", "»", "<", ">", "\"", "”"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_RUSSIAN>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "russian",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.russian.national",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "harlequins-ru-ilyin",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "harlequins-ru-ilyin"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "lolita-ru",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "lolita-ru",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+\\s\\s\\s\\s\\s"],
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['words.separators.toKeep']": ["-", "—", "(", ")", "[", "]", ",", ":", ";", "'", "`", "\"", "«", "»", "<", ">", "\"", "”"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_RUSSIAN>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "russian",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.russian.national",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "lolita-ru",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "lolita-ru"
+						}
+					]
+				}
+			}
+		},		
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "pnin-ru-bar",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "pnin-ru-bar",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['words.separators.toKeep']": ["-", "—", "–", "(", ")", "[", "]", ",", ":", ";", "'", "`", "\"", "«", "»", "<", ">", "\"", "”"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_RUSSIAN>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "russian",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.russian.national",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "pnin-ru-bar",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "pnin-ru-bar"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "sinister-ru-ilyin",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "sinister-ru-ilyin",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['words.separators.toKeep']": ["-", "—", "(", ")", "[", "]", ",", ":", ";", "'", "`", "\"", "«", "»", "<", ">", "\"", "”", "“", "„"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_RUSSIAN>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "russian",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.russian.national",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "sinister-ru-ilyin",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "sinister-ru-ilyin"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "speak-ru",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "speak-ru",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+\\s\\s\\s\\s\\s"],
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['words.separators.toKeep']": ["-", "—", "(", ")", "[", "]", ",", ":", ";", "'", "`", "\"", "«", "»", "<", ">", "\"", "”"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_RUSSIAN>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "russian",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.russian.national",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "speak-ru",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "speak-ru"
+						}
+					]
+				}
+			}
+		}
+	]
+}

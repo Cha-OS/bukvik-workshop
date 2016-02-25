@@ -1,0 +1,387 @@
+{
+	"name": "Nabokov in English",
+	"authors": "Eugenia Kelbert & Sasha Mile Rudan",
+	"version": "0.1",
+	"description": "Close analysis of Nabokov's novels written in English",
+	
+	"data": [
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "corpus-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "corpus-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "corpus-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "corpus-en"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "sinister-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "sinister-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "sinister-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "sinister-en"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "knight-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "knight-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "knight-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "knight-en"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "harlequins-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "harlequins-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+\\s*[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "harlequins-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "harlequins-en"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "pnin-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "pnin-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "pnin-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "pnin-en"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "lolita-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "lolita-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "lolita-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "lolita-en"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "speak-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "speak-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "speak-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "speak-en"
+						}
+					]
+				}
+			}
+		}
+	]
+}
