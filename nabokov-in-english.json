@@ -3,7 +3,7 @@
 	"authors": "Eugenia Kelbert & Sasha Mile Rudan",
 	"version": "0.1",
 	"description": "Close analysis of Nabokov's novels written in English",
-	
+
 	"data": [
 		{
 			"type": "dataset",
@@ -27,7 +27,7 @@
 					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
 					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -81,7 +81,7 @@
 					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
 					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -135,7 +135,7 @@
 					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
 					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -189,7 +189,7 @@
 					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+\\s*[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
 					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -243,7 +243,7 @@
 					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
 					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -297,7 +297,7 @@
 					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
 					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -351,7 +351,7 @@
 					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
 					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']": 
+					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
