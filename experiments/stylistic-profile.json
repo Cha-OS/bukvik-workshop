@@ -35,8 +35,8 @@
 					"direction": "in",
 					"datasets": [
 						{
-							"namespace": "<NAMESPACE_DATA>",
 							"name": "plain"
+							"namespace": "<NAMESPACE_DATA>",
 						}
 					]
 				},
@@ -188,7 +188,7 @@
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.corpora.brown.words.distribution",
 			"name": "Generating Brown list of words distribution",
-			"comment": "distribution of words in the Brown list will be used to remove most occuring words and removing noise",
+			"comment": "distribution of words in the Brown list will be used to remove most occurring words and removing noise",
 			"processorNsN": "corpora.Corpora.Corpora",
 			"execution": 0,
 			"params": {
