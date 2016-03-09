@@ -21,26 +21,27 @@ Russian: corpus-ru, mary-ru, knave-ru, defense-ru, invite-ru, gift-ru, speak-ru,
 ## Other books to be added in future experiments
 
 ### Nabokov’s Novels in English
-1. (1941) The Real Life of Sebastian Knight
-1. (1947) Bend Sinister
-1. (1955) Lolita, self-translated into Russian (1965)
-1. (1957) Pnin
+1. **(1941) The Real Life of Sebastian Knight**
+1. **(1947) Bend Sinister**
+1. **(1955) Lolita, self-translated into Russian (1965)**
+1. **(1957) Pnin**
 1. (1962) Pale Fire
 1. (1969) Ada or Ardor: A Family Chronicle
 1. (1972) Transparent Things
-1. (1974) Look at the Harlequins!
-1. Plus Speak, Memory (1951/1967)
+1. **(1974) Look at the Harlequins!**
+1. Plus **Speak, Memory (1951/1967)**
 
 ### Nabokov’s Novels in Russian
-1. (1926) Mashen'ka (Машенька); English translation: Mary (1970)
-1. (1928) Korol' Dama Valet (Король, дама, валет); English translation: King, Queen, Knave (1968)
-1. (1930) Zashchita Luzhina (Защита Лужина); English translation: The Luzhin Defense or The Defense (1964) (also adapted to film, The Luzhin Defence, in 2000)
+1. **(1926) Mashen'ka** (Машенька); English translation: Mary (1970)
+1. **(1928) Korol' Dama Valet (Король, дама, валет)**; English translation: **King, Queen, Knave (1968)**
+1. **(1930) Zashchita Luzhina (Защита Лужина)**; English translation: The Luzhin Defense or **The Defense** (1964) (also adapted to film, The Luzhin Defence, in 2000)
 1. (1930) Sogliadatai (Соглядатай (The Voyeur)), novella; first publication as a book 1938; English translation: The Eye (1965)
 1. (1932) Podvig (Подвиг (Deed)); English translation: Glory (1971)
 1. (1933) Kamera Obskura (Камера Обскура); English translations: Camera Obscura (1936), Laughter in the Dark (1938)
 1. (1934) Otchayanie (Отчаяние); English translation: Despair (1937, 1965)
-1. (1936) Priglasheniye na kazn' (Приглашение на казнь (Invitation to an execution)); English translation: Invitation to a Beheading (1959)
-1. (1938) Dar (Дар); English translation: The Gift (1963)
+1. **(1936) Priglasheniye na kazn'** (Приглашение на казнь (Invitation to an execution)); English translation: **Invitation to a Beheading** (1959)
+1. **(1938) Dar** (Дар); English translation: **The Gift** (1963)
+Plus **Lolita** and **Drugie berega**.
 
 # Example Flow
 ## import documents (corpora)
