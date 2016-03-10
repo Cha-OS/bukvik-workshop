@@ -7,13 +7,13 @@
 	"data": [
 		{
 			"type": "dataset",
-			"namespace": "<NAMESPACE_DATA>.execute",
+			"namespace": "<NAMESPACE_DATA>",
 			"name": "corpus-en",
 			"paramsProcess": {
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -24,10 +24,10 @@
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
 
-					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
-					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -40,9 +40,9 @@
 		},
 		{
 			"type": "task",
-			"namespace": "<NAMESPACE_TASK>.execute",
+			"namespace": "<NAMESPACE_TASK>",
 			"name": "corpus-en",
-			"comment": "Executing Uppsala sub-experiment",
+			"comment": "Executing stylistic-profile corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -52,7 +52,7 @@
 					"direction": "in",
 					"datasets": [
 						{
-							"namespace": "<NAMESPACE_DATA>.execute",
+							"namespace": "<NAMESPACE_DATA>",
 							"name": "corpus-en"
 						}
 					]
@@ -61,13 +61,13 @@
 		},
 		{
 			"type": "dataset",
-			"namespace": "<NAMESPACE_DATA>.execute",
+			"namespace": "<NAMESPACE_DATA>",
 			"name": "sinister-en",
 			"paramsProcess": {
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -78,10 +78,10 @@
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
 
-					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
-					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -94,9 +94,9 @@
 		},
 		{
 			"type": "task",
-			"namespace": "<NAMESPACE_TASK>.execute",
+			"namespace": "<NAMESPACE_TASK>",
 			"name": "sinister-en",
-			"comment": "Executing Uppsala sub-experiment",
+			"comment": "Executing stylistic-profile corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -106,7 +106,7 @@
 					"direction": "in",
 					"datasets": [
 						{
-							"namespace": "<NAMESPACE_DATA>.execute",
+							"namespace": "<NAMESPACE_DATA>",
 							"name": "sinister-en"
 						}
 					]
@@ -115,13 +115,13 @@
 		},
 		{
 			"type": "dataset",
-			"namespace": "<NAMESPACE_DATA>.execute",
+			"namespace": "<NAMESPACE_DATA>",
 			"name": "knight-en",
 			"paramsProcess": {
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -132,10 +132,10 @@
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
 
-					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
-					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -148,9 +148,9 @@
 		},
 		{
 			"type": "task",
-			"namespace": "<NAMESPACE_TASK>.execute",
+			"namespace": "<NAMESPACE_TASK>",
 			"name": "knight-en",
-			"comment": "Executing Uppsala sub-experiment",
+			"comment": "Executing stylistic-profile corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -160,7 +160,7 @@
 					"direction": "in",
 					"datasets": [
 						{
-							"namespace": "<NAMESPACE_DATA>.execute",
+							"namespace": "<NAMESPACE_DATA>",
 							"name": "knight-en"
 						}
 					]
@@ -169,13 +169,13 @@
 		},
 		{
 			"type": "dataset",
-			"namespace": "<NAMESPACE_DATA>.execute",
+			"namespace": "<NAMESPACE_DATA>",
 			"name": "harlequins-en",
 			"paramsProcess": {
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -186,10 +186,10 @@
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
 
-					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+\\s*[\\r\\n]+"],
-					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+\\s*[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -202,9 +202,9 @@
 		},
 		{
 			"type": "task",
-			"namespace": "<NAMESPACE_TASK>.execute",
+			"namespace": "<NAMESPACE_TASK>",
 			"name": "harlequins-en",
-			"comment": "Executing Uppsala sub-experiment",
+			"comment": "Executing stylistic-profile corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -214,7 +214,7 @@
 					"direction": "in",
 					"datasets": [
 						{
-							"namespace": "<NAMESPACE_DATA>.execute",
+							"namespace": "<NAMESPACE_DATA>",
 							"name": "harlequins-en"
 						}
 					]
@@ -223,13 +223,13 @@
 		},
 		{
 			"type": "dataset",
-			"namespace": "<NAMESPACE_DATA>.execute",
+			"namespace": "<NAMESPACE_DATA>",
 			"name": "pnin-en",
 			"paramsProcess": {
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -240,10 +240,10 @@
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
 
-					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
-					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -256,9 +256,9 @@
 		},
 		{
 			"type": "task",
-			"namespace": "<NAMESPACE_TASK>.execute",
+			"namespace": "<NAMESPACE_TASK>",
 			"name": "pnin-en",
-			"comment": "Executing Uppsala sub-experiment",
+			"comment": "Executing stylistic-profile corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -268,7 +268,7 @@
 					"direction": "in",
 					"datasets": [
 						{
-							"namespace": "<NAMESPACE_DATA>.execute",
+							"namespace": "<NAMESPACE_DATA>",
 							"name": "pnin-en"
 						}
 					]
@@ -277,13 +277,13 @@
 		},
 		{
 			"type": "dataset",
-			"namespace": "<NAMESPACE_DATA>.execute",
+			"namespace": "<NAMESPACE_DATA>",
 			"name": "lolita-en",
 			"paramsProcess": {
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -294,10 +294,10 @@
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
 
-					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
-					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -310,9 +310,9 @@
 		},
 		{
 			"type": "task",
-			"namespace": "<NAMESPACE_TASK>.execute",
+			"namespace": "<NAMESPACE_TASK>",
 			"name": "lolita-en",
-			"comment": "Executing Uppsala sub-experiment",
+			"comment": "Executing stylistic-profile corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -322,7 +322,7 @@
 					"direction": "in",
 					"datasets": [
 						{
-							"namespace": "<NAMESPACE_DATA>.execute",
+							"namespace": "<NAMESPACE_DATA>",
 							"name": "lolita-en"
 						}
 					]
@@ -331,13 +331,13 @@
 		},
 		{
 			"type": "dataset",
-			"namespace": "<NAMESPACE_DATA>.execute",
+			"namespace": "<NAMESPACE_DATA>",
 			"name": "speak-en",
 			"paramsProcess": {
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/zhenia-master-standard.json",
+				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -348,10 +348,10 @@
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
 
-					"task:<NAMESPACE_TASK>.parsers:Words['params']['paragraphs.separators']": ["[\\r\\n]+"],
-					"task:<NAMESPACE_TASK>.pos:Parsing POS-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:ReMapping POS-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:Calculating Simple Stats['ports']['corpus']['datasets']":
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -364,9 +364,9 @@
 		},
 		{
 			"type": "task",
-			"namespace": "<NAMESPACE_TASK>.execute",
+			"namespace": "<NAMESPACE_TASK>",
 			"name": "speak-en",
-			"comment": "Executing Uppsala sub-experiment",
+			"comment": "Executing stylistic-profile corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -376,7 +376,7 @@
 					"direction": "in",
 					"datasets": [
 						{
-							"namespace": "<NAMESPACE_DATA>.execute",
+							"namespace": "<NAMESPACE_DATA>",
 							"name": "speak-en"
 						}
 					]

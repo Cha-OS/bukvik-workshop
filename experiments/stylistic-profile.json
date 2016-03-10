@@ -26,7 +26,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.import",
-			"name": "Importing the corpus",
+			"name": "importing the corpus",
 			"comment": "Importing the corpus as raw text",
 			"processorNsN": "importers.ImporterText.ImporterText",
 			"execution": 0,
@@ -59,7 +59,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.parsers",
-			"name": "Words",
+			"name": "words",
 			"comment": "Parsing raw text and producing 3 outputs: words, sentences, and paragraphs",
 			"processorNsN": "parsers.SplitRawIntoWords.SplitRawIntoWords",
 			"execution": 0,
@@ -96,7 +96,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.pos",
-			"name": "Parsing POS-external",
+			"name": "parsing-pos-external",
 			"comment": "Parsing(-external) paragraphs and producing POS (Part Of Speach) tagged paragraphs",
 			"processorNsN": "pos.TaggerExternal.TaggerExternal",
 			"execution": 0,
@@ -138,7 +138,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.pos",
-			"name": "ReMapping POS-tags",
+			"name": "remapping-pos-tags",
 			"comment": "Remapping POS (Part Of Speach) tags into general tagset",
 			"processorNsN": "pos.TagsetMapping.TagsetMapping",
 			"execution": 0,
@@ -187,7 +187,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.corpora.brown.words.distribution",
-			"name": "Generating Brown list of words distribution",
+			"name": "generating-brown-list-of-words-distribution",
 			"comment": "distribution of words in the Brown list will be used to remove most occurring words and removing noise",
 			"processorNsN": "corpora.Corpora.Corpora",
 			"execution": 0,
@@ -265,7 +265,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.stats",
-			"name": "Calculating Simple Stats",
+			"name": "calculating-simple-stats",
 			"comment": "Calculating simple statistics (sentence and paragraph length, etc)",
 			"processorNsN": "distributions.SimpleStats.SimpleStats",
 			"forceExecute": false,
@@ -317,7 +317,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.stats",
-			"name": "Calculating Etymology",
+			"name": "calculating-etymology",
 			"comment": "Calculating etymology statistics",
 			"processorNsN": "wordnet.EtymologyCalculate.EtymologyCalculate",
 			"forceExecute": false,
@@ -727,7 +727,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.pos",
-			"name": "Searching POS",
+			"name": "searching-pos",
 			"comment": "Searching for occurrences of POS patterns in Lolita word and POS paragraphs and producing pattern matched results and statistics",
 			"processorNsN": "pos.TagsSearch.TagsSearch",
 			"execution": 3,
@@ -788,7 +788,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.pos",
-			"name": "Exporting POS patterns",
+			"name": "exporting-pos-patterns",
 			"comment": "Exporting occurrences of POS patterns in the corpus",
 			"processorNsN": "pos.TagsExport.TagsExport",
 			"execution": 3,
@@ -836,7 +836,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.pos",
-			"name": "Exporting POS document",
+			"name": "exporting-pos-document",
 			"comment": "Exporting POS representation",
 			"processorNsN": "exporters.ExporterPosAnnotatedHtml.ExporterPosAnnotatedHtml",
 			"execution": 0,
