@@ -379,7 +379,7 @@
 			"forceExecute": true,
 			"isPower": true,
 			"ports": {
-				"in": {"importing the corpus"
+				"in": {
 					"direction": "in",
 					"datasets": [
 						{

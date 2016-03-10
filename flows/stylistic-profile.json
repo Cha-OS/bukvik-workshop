@@ -26,7 +26,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.import",
-			"name": "importing the corpus",
+			"name": "importing-the-corpus",
 			"comment": "Importing the corpus as raw text",
 			"processorNsN": "importers.ImporterText.ImporterText",
 			"execution": 0,

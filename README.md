@@ -108,3 +108,22 @@ Plus **Lolita** and **Drugie berega**.
 **Society of Words, semantic…**
 1. Brainstorm on the future of such tools, and where Bukvik can/will develop (modular etc).
 1. Collaborations?
+
+# Running
+
+```sh
+cdbd
+cd ../..
+mkdir datasets
+cd datasets
+git clone https://github.com/Cha-OS/bukvik-workshop-corpora
+```
+
+
+```sh
+cdbp
+```
+
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.import.importing-the-corpus"
+```
