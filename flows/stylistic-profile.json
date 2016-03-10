@@ -36,7 +36,7 @@
 					"datasets": [
 						{
 							"name": "plain"
-							"namespace": "<NAMESPACE_DATA>",
+							"namespace": "<NAMESPACE_DATA>"
 						}
 					]
 				},
