@@ -629,7 +629,7 @@
 			"type": "task",
 			"namespace": "<NAMESPACE_DATA>.pos",
 			"name": "distribution",
-			"comment": "Distribution of uni-grams, bi-grams, & tri-grams of POS tags in Lolota",
+			"comment": "Distribution of uni-grams, bi-grams, & tri-grams of POS tags in the corpus",
 			"processorNsN": "distributions.NGramOccurrenceFrequency.NGramOccurrenceFrequency",
 			"execution": 0,
 			"params": {
@@ -728,7 +728,7 @@
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.pos",
 			"name": "searching-pos",
-			"comment": "Searching for occurrences of POS patterns in Lolita word and POS paragraphs and producing pattern matched results and statistics",
+			"comment": "Searching for occurrences of POS patterns in the corpus' word and POS paragraphs and producing pattern matched results and statistics",
 			"processorNsN": "pos.TagsSearch.TagsSearch",
 			"execution": 3,
 			"params": {

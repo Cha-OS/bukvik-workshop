@@ -124,10 +124,135 @@ git clone https://github.com/Cha-OS/bukvik-workshop-corpora
 cdbp
 ```
 
+Execute whole flow:
 ```sh
-python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.import.importing-the-corpus"
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json
 ```
 
+Execute particular task (`<NAMESPACE_TASK>.import.importing-the-corpus`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.execute.corpus-en"
+```
+
+(mprinc):
 ```sh
 python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.import.importing-the-corpus"
 ```
+
+Execute particular task (`<NAMESPACE_TASK>.parsers.words`):
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.parsers.words"
+```
+(mprinc):
+```sh
+python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.parsers.words"
+```
+
+Execute particular task (`<NAMESPACE_TASK>.pos.parsing-pos-external`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.pos.parsing-pos-external"
+```
+
+(mprinc):
+```sh
+python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.pos.parsing-pos-external"
+```
+
+Execute particular task (`<NAMESPACE_TASK>.pos.remapping-pos-tags`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.pos.remapping-pos-tags"
+```
+
+(mprinc):
+```sh
+python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.pos.remapping-pos-tags"
+```
+
+Execute particular task (`<NAMESPACE_TASK>.corpora.brown.words.distribution.generating-brown-list-of-words-distribution`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.corpora.brown.words.distribution.generating-brown-list-of-words-distribution"
+```
+
+Execute particular task (`<NAMESPACE_TASK>.stats.calculating-simple-stats`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.stats.calculating-simple-stats"
+```
+
+
+Execute particular task (`<NAMESPACE_TASK>.stats.calculating-etymology`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.stats.calculating-etymology"
+```
+
+
+Execute particular task (`<NAMESPACE_TASK>.distribution`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.distribution"
+```
+
+
+Execute particular task (`<NAMESPACE_TASK>.pos.distribution-out`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.pos.distribution-out"
+```
+
+Execute particular task (`<NAMESPACE_TASK>.pos.searching-pos`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.pos.searching-pos"
+```
+
+Execute particular task (`<NAMESPACE_TASK>.pos.exporting-pos-patterns`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.pos.exporting-pos-patterns"
+```
+
+Execute particular task (`<NAMESPACE_TASK>.pos.exporting-pos-document`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.pos.exporting-pos-document"
+```
+
+
+Execute particular task (`<NAMESPACE_TASK>.dictionary.ner.characters.import.importing-ner-dictionary-file`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.dictionary.ner.characters.import.importing-ner-dictionary-file"
+```
+
+
+Execute particular task (`<NAMESPACE_TASK>.dictionary.ner.characters.recognize.recognizing-ner`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.dictionary.ner.characters.recognize.recognizing-ner"
+```
+
+
+Execute particular task (`<NAMESPACE_TASK>.distribution-out`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.distribution-out"
+```
+
+Execute particular task (`<NAMESPACE_TASK>.words-society.wordssociety`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.words-society.wordssociety"
+```
+
+Execute particular task (`<NAMESPACE_TASK>.words-society.wordssociety-out-graph`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.words-society.wordssociety-out-graph"
+```
+
+>>>>>>> fbdff7633d4789e8e027a7aede207829a7b85f05
