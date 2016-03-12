@@ -291,6 +291,10 @@
 				"corpus": {
 					"direction": "in",
 					"datasets": [
+						{
+							"namespace": "corpora.brown.words",
+							"name": "distribution"
+						}
 					]
 				},
 				"inout": {
