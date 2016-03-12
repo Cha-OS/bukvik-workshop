@@ -275,7 +275,7 @@
 				"examples.storeNo": true,
 				"examples.ShowNum": 300,
 				"results.namespace": "SimpleStats",
-				"corpus.key": "lemas.dict",
+				"corpus.key": "lemmas.dict",
 				"corpus.index": 1
 			},
 			"ports": {
