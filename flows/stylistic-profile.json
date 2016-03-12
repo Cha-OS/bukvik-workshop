@@ -274,7 +274,7 @@
 				"examples.store": true,
 				"examples.storeNo": true,
 				"examples.ShowNum": 300,
-				"results.namespace": "SimpleStats",
+				"results.namespace": "SimpleStats"
 			},
 			"ports": {
 				"in": {
