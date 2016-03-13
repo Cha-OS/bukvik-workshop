@@ -8,7 +8,7 @@ source: `stylistic-profile.json`
 
 source: `dictionary-etymology.json`
 
-This flow is used to generate etymology dataset from dictionary etymology. After the etimology dataset is generated (with the namespace-name: `dictionary.etymology.wiktionary.deep-partial`) it can be used across the project. At the moment it is used in the corpora flow: `stylistic-profile`.
+This flow is used to generate etymology dataset from dictionary etymology. After the etymology dataset is generated (with the namespace-name: `dictionary.etymology.wiktionary.deep-partial`), it can be used across the project. At the moment it is used in the corpora flow: `stylistic-profile`.
 
 Execute the flow (`dictionary-etymology`):
 (server)
