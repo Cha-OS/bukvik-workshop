@@ -1,0 +1,158 @@
+{
+	"name": "Dictionary - Etymology (Wiktionary)",
+	"authors": "Sasha Mile Rudan & Eugenia Kelbert",
+	"version": "0.2",
+	"description": "Dictionary - Etymological Wordnet is maintained by Gerard de Melo, Etymological Wordnet: Tracing the History of Words, In: Proc. LREC 2014. ELRA, 2014, Paris, France.",
+
+	"data": [
+		{
+			"type": "dataset",
+			"namespace": "dictionary.etymology.wiktionary",
+			"name": "plain-file",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_ETYMOLOGY>/etymwn-clear.tsv",
+				"fileIn.type": "tsv",
+				"fileIn.encoding": "utf8"
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "dataset",
+			"namespace": "dictionary.etymology.wiktionary",
+			"name": "deep-partial",
+			"paramsProcess": {
+			},
+			"params": {
+			},
+			"shouldInvalidate": true,
+			"cacheAsJson": true
+		},
+		{
+			"type": "task",
+			"namespace": "dictionary.etymology.wiktionary",
+			"name": "import",
+			"comment": "Importing Etymology Dictionary",
+			"processorNsN": "wordnet.EtymologyImport.EtymologyImport",
+			"execution": 0,
+			"forceExecute": false,
+			"isPower": true,
+			"params": {
+				"skip.prefixes": true,
+				"skip.sufixes": false,
+				"languages.support": {
+					"english": [
+						"aig \tAntigua and Barbuda Creole English \tCreole English, Antigua and Barbuda",
+						"ang \tOld English (ca. 450-1100) \tEnglish, Old (ca. 450-1100)",
+						"bah \tBahamas Creole English \tCreole English, Bahamas",
+						"bzj \tBelize Kriol English \tKriol English, Belize",
+						"bzk \tNicaragua Creole English \tCreole English, Nicaragua",
+						"cpi \tChinese Pidgin English \tPidgin English, Chinese",
+						"eng \tEnglish \tEnglish",
+						"enm \tMiddle English (1100-1500) \tEnglish, Middle (1100-1500)",
+						"fpe \tFernando Po Creole English \tCreole English, Fernando Po",
+						"gcl \tGrenadian Creole English \tCreole English, Grenadian",
+						"gpe \tGhanaian Pidgin English \tPidgin English, Ghanaian",
+						"gul \tSea Island Creole English \tCreole English, Sea Island",
+						"gyn \tGuyanese Creole English \tCreole English, Guyanese",
+						"hwc \tHawai'i Creole English \tCreole English, Hawai'i",
+						"icr \tIslander Creole English \tCreole English, Islander",
+						"jam \tJamaican Creole English \tCreole English, Jamaican",
+						"lir \tLiberian English \tEnglish, Liberian",
+						"svc \tVincentian Creole English \tCreole English, Vincentian",
+						"tch \tTurks And Caicos Creole English \tCreole English, Turks And Caicos",
+						"tgh \tTobagonian Creole English \tCreole English, Tobagonian",
+						"trf \tTrinidadian Creole English \tCreole English, Trinidadian",
+						"vic \tVirgin Islands Creole English \tCreole English, Virgin Islands"
+					],
+					"french": [
+						"acf \tSaint Lucian Creole French \tCreole French, Saint Lucian",
+						"crs \tSeselwa Creole French \tCreole French, Seselwa",
+						"fra \tFrench \tFrench",
+						"frc \tCajun French \tFrench, Cajun",
+						"frm \tMiddle French (ca. 1400-1600) \tFrench, Middle (ca. 1400-1600)",
+						"fro \tOld French (842-ca. 1400) \tFrench, Old (842-ca. 1400)",
+						"fsl \tFrench Sign Language \tFrench Sign Language",
+						"gcf \tGuadeloupean Creole French \tCreole French, Guadeloupean",
+						"gcr \tGuianese Creole French \tCreole French, Guianese",
+						"kmv \tKaripúna Creole French \tCreole French, Karipúna",
+						"lou \tLouisiana Creole French \tCreole French, Louisiana",
+						"rcf \tRéunion Creole French \tCreole French, Réunion",
+						"scf \tSan Miguel Creole French \tCreole French, San Miguel",
+						"sfb \tFrench Belgian Sign Language \tFrench Belgian Sign Language",
+						"ssr \tSwiss-French Sign Language \tSwiss-French Sign Language"
+					],
+					"russian": [
+						"orv \tOld Russian \tRussian, Old",
+						"rsl \tRussian Sign Language \tRussian Sign Language",
+						"rus \tRussian \tRussian"
+					],
+					"german": [
+						"deu \tGerman \tGerman",
+						"gct \tColonia Tovar German \tGerman, Colonia Tovar",
+						"geh \tHutterite German \tGerman, Hutterite",
+						"gmh \tMiddle High German (ca. 1050-1500) \tGerman, Middle High (ca. 1050-1500)",
+						"gml \tMiddle Low German \tGerman, Middle Low",
+						"goh \tOld High German (ca. 750-1050) \tGerman, Old High (ca. 750-1050)",
+						"gsg \tGerman Sign Language \tGerman Sign Language",
+						"gsw \tSwiss German \tGerman, Swiss",
+						"nds \tLow German \tGerman, Low",
+						"pdc \tPennsylvania German \tGerman, Pennsylvania",
+						"sgg \tSwiss-German Sign Language \tSwiss-German Sign Language"
+					],
+					"italian": [
+						"ise \tItalian Sign Language \tItalian Sign Language",
+						"ita \tItalian \tItalian",
+						"itk \tJudeo-Italian \tJudeo-Italian",
+						"slf \tSwiss-Italian Sign Language \tSwiss-Italian Sign Language"
+					],
+					"polish": [
+						"pol \tPolish \tPolish",
+						"pso \tPolish Sign Language \tPolish Sign Language"
+					],
+					"yiddish": [
+						"ydd \tEastern Yiddish \tYiddish, Eastern",
+						"yid \tYiddish \tYiddish",
+						"yih \tWestern Yiddish \tYiddish, Western"
+					],
+					"latin": [
+						"lat \tLatin \tLatin"
+					],
+					"greek": [
+						"cpg \tCappadocian Greek \tGreek, Cappadocian",
+						"ell \tModern Greek (1453-) \tGreek, Modern (1453-)",
+						"gmy \tMycenaean Greek \tGreek, Mycenaean",
+						"grc \tAncient Greek (to 1453) \tGreek, Ancient (to 1453)",
+						"gss \tGreek Sign Language \tGreek Sign Language",
+						"rge \tRomano-Greek \tRomano-Greek"
+					],
+					"norse": [
+						"non \tOld Norse \tNorse, Old"
+					]
+				}
+			},
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "dictionary.etymology.wiktionary",
+							"name": "plain-file"
+						}
+					]
+				},
+				"out": {
+					"direction": "out",
+					"datasets": [
+						{
+							"namespace": "dictionary.etymology.wiktionary",
+							"name": "deep-partial"
+						}
+					]
+				}
+			}
+		}
+	]
+}

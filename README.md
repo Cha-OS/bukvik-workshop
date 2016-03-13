@@ -2,7 +2,24 @@
 
 # Corpus Flows Associated with the DHN Workshop
 
-stylistic-profile.json
+source: `stylistic-profile.json`
+
+# Etymology Flow Associated with the DHN Workshop
+
+source: `dictionary-etymology.json`
+
+This flow is used to generate etymology dataset from dictionary etymology. After the etimology dataset is generated (with the namespace-name: `dictionary.etymology.wiktionary.deep-partial`) it can be used across the project. At the moment it is used in the corpora flow: `stylistic-profile`.
+
+Execute the flow (`dictionary-etymology`):
+(server)
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/dictionary-etymology.json
+```
+
+(mprinc):
+```sh
+python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/dictionary-etymology.json
+```
 
 # Corpora Flows Associated with the DHN Workshop
 
