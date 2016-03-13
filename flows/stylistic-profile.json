@@ -629,7 +629,7 @@
 		},
 		{
 			"type": "task",
-			"namespace": "<NAMESPACE_DATA>.pos",
+			"namespace": "<NAMESPACE_TASK>.pos",
 			"name": "distribution",
 			"comment": "Distribution of uni-grams, bi-grams, & tri-grams of POS tags in the corpus",
 			"processorNsN": "distributions.NGramOccurrenceFrequency.NGramOccurrenceFrequency",
