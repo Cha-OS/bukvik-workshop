@@ -177,12 +177,21 @@ Execute particular task (`<NAMESPACE_TASK>.corpora.brown.words.distribution.gene
 python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.corpora.brown.words.distribution.generating-brown-list-of-words-distribution"
 ```
 
+(mprinc):
+```sh
+python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.corpora.brown.words.distribution.generating-brown-list-of-words-distribution"
+```
+
 Execute particular task (`<NAMESPACE_TASK>.stats.calculating-simple-stats`):
 (server)
 ```sh
 python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.stats.calculating-simple-stats"
 ```
 
+(mprinc):
+```sh
+python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.stats.calculating-simple-stats"
+```
 
 Execute particular task (`<NAMESPACE_TASK>.stats.calculating-etymology`):
 (server)

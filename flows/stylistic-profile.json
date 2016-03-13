@@ -133,7 +133,7 @@
 			"type": "dataset",
 			"namespace": "<NAMESPACE_DATA>.pos",
 			"name": "data",
-			"shouldInvalidate": true
+			"shouldInvalidate": false
 		},
 		{
 			"type": "task",
@@ -274,9 +274,7 @@
 				"examples.store": true,
 				"examples.storeNo": true,
 				"examples.ShowNum": 300,
-				"results.namespace": "SimpleStats",
-				"corpus.key": "lemas.dict",
-				"corpus.index": 1
+				"results.namespace": "SimpleStats"
 			},
 			"ports": {
 				"in": {
@@ -538,7 +536,7 @@
 			"type": "dataset",
 			"namespace": "<NAMESPACE_DATA>",
 			"name": "distribution",
-			"shouldInvalidate": true
+			"shouldInvalidate": false
 		},
 		{
 			"type": "task",
@@ -591,7 +589,7 @@
 				"limitMax": 1.0,
 				"limitMin": 0
 			},
-			"shouldInvalidate": true
+			"shouldInvalidate": false
 		},
 		{
 			"type": "task",
@@ -627,7 +625,7 @@
 			"type": "dataset",
 			"namespace": "<NAMESPACE_DATA>.pos",
 			"name": "distribution",
-			"shouldInvalidate": true
+			"shouldInvalidate": false
 		},
 		{
 			"type": "task",
@@ -680,7 +678,7 @@
 				"limitMax": 1.0,
 				"limitMin": 0
 			},
-			"shouldInvalidate": true
+			"shouldInvalidate": false
 		},
 		{
 			"type": "task",
@@ -726,7 +724,7 @@
 			"namespace": "<NAMESPACE_DATA>.pos",
 			"name": "search-results",
 			"data": {},
-			"shouldInvalidate": true
+			"shouldInvalidate": false
 		},
 		{
 			"type": "task",
@@ -787,7 +785,7 @@
 				"fileOutExamples.type": "html",
 				"fileOutExamples.encoding": "utf-8"
 			},
-			"shouldInvalidate": true
+			"shouldInvalidate": false
 		},
 		{
 			"type": "task",
@@ -835,7 +833,7 @@
 				"fileOut.type": "html",
 				"fileOut.encoding": "utf-8"
 			},
-			"shouldInvalidate": true
+			"shouldInvalidate": false
 		},
 		{
 			"type": "task",
