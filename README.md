@@ -130,6 +130,7 @@ Plus **Lolita** and **Drugie berega**.
 
 **IMPORTANT ABOUT NAMING**: corpora flows are renamed to avoid collisions of namespace and NamespaceName, for example: namespace: bukvik-workshop.data.lolita-ru and NsN: bukvik-workshop.data.lolita-ru:pos
 
+(NOTE: BukvikDatasets: setDataset > BukvikNamespaceContainer: setEntity > _getContainer > 
 ```sh
 cdbd
 cd ../..
