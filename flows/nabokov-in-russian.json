@@ -18,8 +18,8 @@
 				"fileIn.encoding": "utf-8",
 				"environment": {
 					"SUB_PROJECT_NAME": "corpus-ru",
-					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
-					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
@@ -73,8 +73,8 @@
 				"fileIn.encoding": "utf-8",
 				"environment": {
 					"SUB_PROJECT_NAME": "defense-ru",
-					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
-					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
@@ -128,8 +128,8 @@
 				"fileIn.encoding": "utf-8",
 				"environment": {
 					"SUB_PROJECT_NAME": "gift-ru",
-					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
-					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
@@ -183,8 +183,8 @@
 				"fileIn.encoding": "utf-8",
 				"environment": {
 					"SUB_PROJECT_NAME": "invite-ru",
-					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
-					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
@@ -238,8 +238,8 @@
 				"fileIn.encoding": "utf-8",
 				"environment": {
 					"SUB_PROJECT_NAME": "knave-ru",
-					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
-					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
@@ -293,8 +293,8 @@
 				"fileIn.encoding": "utf-8",
 				"environment": {
 					"SUB_PROJECT_NAME": "mary-ru",
-					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
-					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
@@ -348,8 +348,8 @@
 				"fileIn.encoding": "utf-8",
 				"environment": {
 					"SUB_PROJECT_NAME": "lolita-ru",
-					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
-					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
 					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],

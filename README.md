@@ -128,6 +128,8 @@ Plus **Lolita** and **Drugie berega**.
 
 # Running
 
+**IMPORTANT ABOUT NAMING**: corpora flows are renamed to avoid collisions of namespace and NamespaceName, for example: namespace: bukvik-workshop.data.lolita-ru and NsN: bukvik-workshop.data.lolita-ru:pos
+
 ```sh
 cdbd
 cd ../..
@@ -326,5 +328,3 @@ Execute particular task (`<NAMESPACE_TASK>.words-society.wordssociety-out-graph`
 ```sh
 python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile.json -cmd execTask -t "<NAMESPACE_TASK>.words-society.wordssociety-out-graph"
 ```
-
->>>>>>> fbdff7633d4789e8e027a7aede207829a7b85f05
