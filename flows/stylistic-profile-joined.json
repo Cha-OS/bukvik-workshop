@@ -1,0 +1,189 @@
+{
+	"name": "stylistic-profile joined",
+	"authors": "Eugenia Kelbert & Sasha Mile Rudan",
+	"version": "0.1",
+	"description": "Joined results of multiple documents. Each dataset type of interest produces one file with joined datasets of documents of interest",
+	
+	"data": [
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "stylistic-profile-pos-joining",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/stylistic-profile-joined-subexperiment.json",
+				"filet66In.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "english-comparative-datasets",
+					"NAMESPACE_DATA_ORIGINAL": "<NAMESPACE_DATA>",
+					"NAMESPACE_TASK_ORIGINAL": "<NAMESPACE_TASK>",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['mergingEndings']": [
+						"pos.distribution",
+						"stats.results"
+ 					],
+					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['merging']": [
+						{
+							"name": "corpus-en",
+							"dataset": "stylistic-profile.data.corpus-en"
+						},
+						{
+							"name": "lolita-en",
+							"dataset": "stylistic-profile.data.lolita-en"
+						},
+						{
+							"name": "speak-en",
+							"dataset": "stylistic-profile.data.speak-en"
+						},						
+						{
+							"name": "pnin-en",
+							"dataset": "stylistic-profile.data.pnin-en"
+						},
+						{
+							"name": "sinister-en",
+							"dataset": "stylistic-profile.data.sinister-en"
+						},
+						{
+							"name": "harlequins-en",
+							"dataset": "stylistic-profile.data.harlequins-en"
+						},
+						{
+							"name": "defense-en",
+							"dataset": "stylistic-profile.data.defense-en"
+						},
+						{
+							"name": "knave-en",
+							"dataset": "stylistic-profile.data.knave-en"
+						},
+						{
+							"name": "gift-en",
+							"dataset": "stylistic-profile.data.gift-en"
+						},
+						{
+							"name": "invite-en",
+							"dataset": "stylistic-profile.data.invite-en"
+						}
+					],
+					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['dataParams']": {
+						"type": "bukvik.structure.pos.Distribution",
+						"structure": "array"
+					}
+				}
+			},
+			"shouldInvalidate": true
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "english-comparative-datasets-pos-joining",
+			"comment": "Executing pos-joining sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "stylistic-profile-pos-joining"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "russian-comparative-datasets-pos-joining",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_DATA>/stylistic-profile-joined-subexperiment.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "russian-comparative-datasets",
+					"NAMESPACE_DATA_ORIGINAL": "<NAMESPACE_DATA>",
+					"NAMESPACE_TASK_ORIGINAL": "<NAMESPACE_TASK>",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['mergingEndings']": [
+						"pos.distribution",
+						"stats.results"
+ 					],
+					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['merging']": [
+						{
+							"name": "corpus-ru",
+							"dataset": "stylistic-profile.data.corpus-ru"
+						},
+						{
+							"name": "lolita-ru",
+							"dataset": "stylistic-profile.data.lolita-ru"
+						},
+						{
+							"name": "defense-ru",
+							"dataset": "stylistic-profile.data.defense-ru"
+						},
+						{
+							"name": "gift-ru",
+							"dataset": "stylistic-profile.data.gift-ru"
+						},
+						{
+							"name": "invite-ru",
+							"dataset": "stylistic-profile.data.invite-ru"
+						},
+						{
+							"name": "knave-ru",
+							"dataset": "stylistic-profile.data.knave-ru"
+						},
+						{
+							"name": "mary-ru",
+							"dataset": "stylistic-profile.data.mary-ru"
+						},
+						{
+							"name": "speak-ru",
+							"dataset": "stylistic-profile.data.speak-ru"
+						}
+					],
+					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['dataParams']": {
+						"type": "bukvik.structure.pos.Distribution",
+						"structure": "array"
+					}
+				}
+			},
+			"shouldInvalidate": true
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "russian-comparative-datasets-pos-joining",
+			"comment": "Executing pos-joining sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "russian-comparative-datasets-pos-joining"
+						}
+					]
+				}
+			}
+		}
+	]
+}
