@@ -13,7 +13,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -67,7 +67,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -121,7 +121,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -175,7 +175,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -229,7 +229,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -283,7 +283,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -337,7 +337,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
