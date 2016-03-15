@@ -3,18 +3,18 @@
 	"authors": "Eugenia Kelbert & Sasha Mile Rudan",
 	"version": "0.1",
 	"description": "Joined results of multiple documents. Each dataset type of interest produces one file with joined datasets of documents of interest",
-	
+
 	"data": [
 		{
 			"type": "dataset",
 			"namespace": "<NAMESPACE_DATA>.execute",
-			"name": "stylistic-profile-pos-joining",
+			"name": "english-stylistic-profile-pos-joining",
 			"paramsProcess": {
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/stylistic-profile-joined-subexperiment.json",
-				"filet66In.type": "json",
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile-joined-subflow.json",
+				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
 					"SUB_PROJECT_NAME": "english-comparative-datasets",
@@ -31,43 +31,27 @@
 					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['merging']": [
 						{
 							"name": "corpus-en",
-							"dataset": "stylistic-profile.data.corpus-en"
+							"dataset": "bukvik-workshop.data.sub-corpus-en"
 						},
 						{
 							"name": "lolita-en",
-							"dataset": "stylistic-profile.data.lolita-en"
+							"dataset": "bukvik-workshop.data.sub-lolita-en"
 						},
 						{
 							"name": "speak-en",
-							"dataset": "stylistic-profile.data.speak-en"
-						},						
+							"dataset": "bukvik-workshop.data.sub-speak-en"
+						},
 						{
 							"name": "pnin-en",
-							"dataset": "stylistic-profile.data.pnin-en"
+							"dataset": "bukvik-workshop.data.sub-pnin-en"
 						},
 						{
 							"name": "sinister-en",
-							"dataset": "stylistic-profile.data.sinister-en"
+							"dataset": "bukvik-workshop.data.sub-sinister-en"
 						},
 						{
 							"name": "harlequins-en",
-							"dataset": "stylistic-profile.data.harlequins-en"
-						},
-						{
-							"name": "defense-en",
-							"dataset": "stylistic-profile.data.defense-en"
-						},
-						{
-							"name": "knave-en",
-							"dataset": "stylistic-profile.data.knave-en"
-						},
-						{
-							"name": "gift-en",
-							"dataset": "stylistic-profile.data.gift-en"
-						},
-						{
-							"name": "invite-en",
-							"dataset": "stylistic-profile.data.invite-en"
+							"dataset": "bukvik-workshop.data.sub-harlequins-en"
 						}
 					],
 					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['dataParams']": {
@@ -81,7 +65,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.execute",
-			"name": "english-comparative-datasets-pos-joining",
+			"name": "english-stylistic-profile-pos-joining",
 			"comment": "Executing pos-joining sub-experiment",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
@@ -93,7 +77,7 @@
 					"datasets": [
 						{
 							"namespace": "<NAMESPACE_DATA>.execute",
-							"name": "stylistic-profile-pos-joining"
+							"name": "english-stylistic-profile-pos-joining"
 						}
 					]
 				}
@@ -102,12 +86,12 @@
 		{
 			"type": "dataset",
 			"namespace": "<NAMESPACE_DATA>.execute",
-			"name": "russian-comparative-datasets-pos-joining",
+			"name": "russian-stylistic-profile-pos-joining",
 			"paramsProcess": {
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_DATA>/stylistic-profile-joined-subexperiment.json",
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile-joined-subflow.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -125,35 +109,35 @@
 					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['merging']": [
 						{
 							"name": "corpus-ru",
-							"dataset": "stylistic-profile.data.corpus-ru"
+							"dataset": "bukvik-workshop.data.sub-corpus-ru"
 						},
 						{
 							"name": "lolita-ru",
-							"dataset": "stylistic-profile.data.lolita-ru"
+							"dataset": "bukvik-workshop.data.sub-lolita-ru"
 						},
 						{
 							"name": "defense-ru",
-							"dataset": "stylistic-profile.data.defense-ru"
+							"dataset": "bukvik-workshop.data.sub-defense-ru"
 						},
 						{
 							"name": "gift-ru",
-							"dataset": "stylistic-profile.data.gift-ru"
+							"dataset": "bukvik-workshop.data.sub-gift-ru"
 						},
 						{
 							"name": "invite-ru",
-							"dataset": "stylistic-profile.data.invite-ru"
+							"dataset": "bukvik-workshop.data.sub-invite-ru"
 						},
 						{
 							"name": "knave-ru",
-							"dataset": "stylistic-profile.data.knave-ru"
+							"dataset": "bukvik-workshop.data.sub-knave-ru"
 						},
 						{
 							"name": "mary-ru",
-							"dataset": "stylistic-profile.data.mary-ru"
+							"dataset": "bukvik-workshop.data.sub-mary-ru"
 						},
 						{
 							"name": "speak-ru",
-							"dataset": "stylistic-profile.data.speak-ru"
+							"dataset": "bukvik-workshop.data.sub-speak-ru"
 						}
 					],
 					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['dataParams']": {
@@ -167,7 +151,7 @@
 		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.execute",
-			"name": "russian-comparative-datasets-pos-joining",
+			"name": "russian-stylistic-profile-pos-joining",
 			"comment": "Executing pos-joining sub-experiment",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
@@ -179,7 +163,7 @@
 					"datasets": [
 						{
 							"namespace": "<NAMESPACE_DATA>.execute",
-							"name": "russian-comparative-datasets-pos-joining"
+							"name": "russian-stylistic-profile-pos-joining"
 						}
 					]
 				}

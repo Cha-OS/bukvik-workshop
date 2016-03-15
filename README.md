@@ -130,7 +130,7 @@ Plus **Lolita** and **Drugie berega**.
 
 **IMPORTANT ABOUT NAMING**: corpora flows are renamed to avoid collisions of namespace and NamespaceName, for example: namespace: bukvik-workshop.data.lolita-ru and NsN: bukvik-workshop.data.lolita-ru:pos
 
-(NOTE: BukvikDatasets: setDataset > BukvikNamespaceContainer: setEntity > _getContainer > 
+(NOTE: BukvikDatasets: setDataset > BukvikNamespaceContainer: setEntity > _getContainer >
 ```sh
 cdbd
 cd ../..
@@ -156,6 +156,30 @@ python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environ
 (mprinc)
 ```sh
 python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/nabokov-in-english.json
+```
+
+(mprinc)
+```sh
+python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/nabokov-in-english.json -cmd execTask -t "<NAMESPACE_TASK>.corpus-en"
+```
+
+(mprinc)
+```sh
+python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/nabokov-in-russian.json -cmd execTask -t "<NAMESPACE_TASK>.execute.speak-ru"
+```
+
+Execute the joint-flow:
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/stylistic-profile-joined.json
+```
+
+(mprinc)
+```sh
+python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/stylistic-profile-joined.json
+
+(mprinc)
+```sh
+python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/stylistic-profile-joined.json -cmd execTask -t "<NAMESPACE_TASK>.execute.english-stylistic-profile-pos-joining"
 ```
 
 Execute whole flow:
