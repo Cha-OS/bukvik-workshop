@@ -389,6 +389,61 @@
 					]
 				}
 			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.execute",
+			"name": "speak-ru",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "speak-ru",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+\\s\\s\\s\\s\\s"],
+					"task:<NAMESPACE_TASK>.parsers:words['params']['words.separators.toKeep']": ["-", "—", "(", ")", "[", "]", ",", ":", ";", "'", "`", "\"", "«", "»", "<", ">", "\"", "”"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_RUSSIAN>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "russian",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
+						[
+							{
+								"namespace": "corpus.russian.national",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.execute",
+			"name": "speak-ru",
+			"comment": "Executing stylistic-profile corpus-flow",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.execute",
+							"name": "speak-ru"
+						}
+					]
+				}
+			}
 		}
 	]
 }
