@@ -151,7 +151,9 @@ python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environ
 
 Execute a particular task (one text) of the corpora-flow:
 
-python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/nabokov-in-english.json -cmd execTask -t "<NAMESPACE_TASK>.corpus-en"
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/nabokov-in-english.json -cmd execTask -t "<NAMESPACE_TASK>.defense-en"
+```
 
 (mprinc)
 ```sh

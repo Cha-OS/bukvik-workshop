@@ -52,6 +52,22 @@
 						{
 							"name": "harlequins-en",
 							"dataset": "bukvik-workshop.data.sub-harlequins-en"
+						},
+						{
+							"name": "defense-en",
+							"dataset": "bukvik-workshop.data.sub-defense-en"
+						},
+						{
+							"name": "knave-en",
+							"dataset": "bukvik-workshop.data.sub-knave-en"
+						},
+						{
+							"name": "gift-en",
+							"dataset": "bukvik-workshop.data.sub-gift-en"
+						},
+						{
+							"name": "invite-en",
+							"dataset": "bukvik-workshop.data.sub-invite-en"
 						}
 					],
 					"task:<NAMESPACE_TASK>.join:joining-datasets['params']['dataParams']": {
