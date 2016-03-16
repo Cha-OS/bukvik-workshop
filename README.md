@@ -153,6 +153,10 @@ python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environ
 ```sh
 python RunBukvik.py -env ../../../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.mprinc.json -exp ../../../experiments/projects/bukvik-workshop-project/flows/nabokov-in-english.json
 ```
+Execute a task in corpora-flow:
+```sh
+python RunBukvik.py -env ../experiments/projects/bukvik-workshop-project/environments/bukvik-workshop.env.server.json -exp ../experiments/projects/bukvik-workshop-project/flows/nabokov-in-english.json -cmd execTask -t "<NAMESPACE_TASK>.corpus-en"
+```
 
 (mprinc)
 ```sh

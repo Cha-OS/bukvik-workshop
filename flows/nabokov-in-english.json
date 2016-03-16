@@ -382,6 +382,222 @@
 					]
 				}
 			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>",
+			"name": "defense-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "defense-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": true
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>",
+			"name": "defense-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>",
+							"name": "defense-en"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>",
+			"name": "knave-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "knave-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>",
+			"name": "knave-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>",
+							"name": "knave-en"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>",
+			"name": "invite-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "invite-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>",
+			"name": "invite-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>",
+							"name": "invite-en"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>",
+			"name": "gift-en",
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"environment": {
+					"SUB_PROJECT_NAME": "gift-en",
+					"NAMESPACE_DATA": "<NAMESPACE_DATA>.sub-<SUB_PROJECT_NAME>",
+					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
+				},
+				"mappings": {
+					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
+
+					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
+					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
+						[
+							{
+								"namespace": "corpus.english.brown",
+								"name": "distribution"
+							}
+						]
+				}
+			},
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>",
+			"name": "gift-en",
+			"comment": "Executing Uppsala sub-experiment",
+			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
+			"execution": 0,
+			"forceExecute": true,
+			"isPower": true,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>",
+							"name": "gift-en"
+						}
+					]
+				}
+			}
 		}
 	]
 }
