@@ -180,7 +180,7 @@
 			"namespace": "corpora.brown.words",
 			"name": "distribution",
 			"dataParams": {
-				"type": "bukvik.structure.word.Distribution",
+				"type": "bukvik.structure.word.Distribution.Distribution",
 				"structure": "array"
 			}
 		},
